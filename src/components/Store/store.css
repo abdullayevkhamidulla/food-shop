@@ -1,0 +1,251 @@
+.store-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./BG\ Shape\ Content\ \(2\).png);
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.store-wrapper {
+    width: 85%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.store-text {
+    width: 650px;
+    height: 600px;
+    text-align: start;
+    background-image: url(./IMAGE\ \(16\).png);
+    background-size: 600px 500px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.store-text h1 {
+    font-size: 55px;
+    font-weight: 400;
+    color: #35B8BE;
+    letter-spacing: 1.5px;
+    line-height: 55px;
+}
+
+.store-text p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #546285;
+}
+
+.store-text button {
+    width: 220px;
+    height: 60px;
+    border-radius: 7px;
+    border: none;
+    background-color: #35B8BE;
+    color: white;
+    margin-top: 20px;
+    font-size: 18px;
+}
+.Support-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.support-wrapper {
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.support-text {
+    width: 666px;
+    height: 640px;
+    background-image: url(./IMAGE\ \(15\).png);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-left: 50px;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: start;
+}
+
+.support-text h1 {
+    font-size: 53px;
+    line-height: 60px;
+    font-weight: 400;
+    color: white;
+}
+
+.support-text button {
+    width: 162px;
+    height: 55px;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    color: #35B8BE;
+    font-size: 18px;
+}
+
+.sss {
+    font-size: 53px;
+    color: #1B9097;
+}
+
+
+/* Tablet Devices */
+@media (max-width: 768px) {
+    
+    .store-text {
+        width: 100%;
+        height: auto;
+        background-size: contain;
+        align-items: center;
+        text-align: center;
+    }
+    .store_img{
+        width: 450px;
+        height: 450px;
+    }
+    .store-text h1 {
+        font-size: 40px;
+        line-height: 45px;
+    }
+
+    .store-text p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .store-text button {
+        width: 180px;
+        height: 50px;
+        font-size: 16px;
+    }
+    .support-wrapper{
+        height: auto;
+        gap: 40px;
+    }
+    .support_img{
+        width: 440px;
+        height: 400px;
+    } 
+    .support-text {
+        width: 440px;
+        height: 400px;
+        background-size: cover;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .support-text h1 {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    .support-text button {
+        width: 140px;
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .sss {
+        font-size: 40px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    .store-container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .store_img{
+        width: 330px;
+        height: 330px;
+        margin-left: -20px;
+    }
+    .store-text {
+        width: 100%;
+        height: auto;
+        background-size: contain;
+        padding: 20px;
+    }
+
+    .store-text h1 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .store-text p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .store-text button {
+        width: 160px;
+        height: 45px;
+        font-size: 14px;
+    }
+    .support-text h1{
+        font-size: 25px;
+    }
+    .sss{
+        font-size: 25px;
+    }
+    
+    .support_img{
+        width: 350px;
+        height: 300px;
+    } 
+    .support-text {
+        width: 350px;
+        height: 350px;
+        background-size: cover;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .support-text button{
+        width: 100px;
+        height: 40px;
+        font-size: 13px;
+    }
+
+}
+@media (max-width: 1200px){
+    .store-text {
+        width: 100%;
+        height: auto;
+        background-size: contain;
+        align-items: center;
+        text-align: center;
+    }
+    .store-wrapper{
+        gap: 50px;
+    }
+    .support-wrapper{
+        align-items: center;
+        flex-direction: column;
+        gap: 40px;
+        
+    }
+}
