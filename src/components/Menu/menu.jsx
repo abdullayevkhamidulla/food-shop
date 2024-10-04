@@ -9,22 +9,25 @@ import image12 from './IMAGE (12).png';
 import image7 from './IMAGE7.png';
 
 const menuItems = [
-  { name: 'Burger Dreams', price: '$9.20', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', image: image8 },
-  { name: 'Burger Waldo', price: '$10.00', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', image: image9 },
-  { name: 'Burger Cali', price: '$8.00', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', image: image10 },
-  { name: 'Burger Bacon Buddy', price: '$9.99', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', image: image11 },
-  { name: 'Burger Spicy', price: '$9.20', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', image: image12 },
-  { name: 'Burger Classic', price: '$8.00', description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', image: image7 },
+  { name: 'Burger Dreams', price: 9.20, description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', image: image8 },
+  { name: 'Burger Waldo', price: 10.00, description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', image: image9 },
+  { name: 'Burger Cali', price: 8.00, description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', image: image10 },
+  { name: 'Burger Bacon Buddy', price: 9.99, description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', image: image11 },
+  { name: 'Burger Spicy', price: 9.20, description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', image: image12 },
+  { name: 'Burger Classic', price: 8.00, description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', image: image7 },
 ];
 
 const Menu = ({ onAddToCart }) => {
   const [cartCounts, setCartCounts] = useState(Array(menuItems.length).fill(0));
+  const [totalPrice, setTotalPrice] = useState(0); // New state for total price
 
   const handleAddToCart = (index) => {
     const newCartCounts = [...cartCounts];
     newCartCounts[index] += 1;
     setCartCounts(newCartCounts);
-    onAddToCart(1); // Add 1 to the cart when an item is added
+    const itemPrice = menuItems[index].price;
+    setTotalPrice(prevTotal => prevTotal + itemPrice); // Update total price
+    onAddToCart(1); 
   };
 
   return (
@@ -44,7 +47,10 @@ const Menu = ({ onAddToCart }) => {
               <div className="menu-item-content">
                 <div className="menu-item-footer">
                   <h3>{item.name}</h3>
-                  <span className="menu-price">{item.price} USD</span>
+                  <span className="menu-price">
+                 
+                  ${item.price} USD
+                  </span>
                 </div>
                 <p>{item.description}</p>
                 <div className="menu-items">
@@ -54,11 +60,19 @@ const Menu = ({ onAddToCart }) => {
                     onClick={() => handleAddToCart(index)}>
                     Add to cart
                   </button>
+                  <span className="menu-total-price">
+                 TOTAL =  ${(item.price * cartCounts[index]).toFixed(2)} USD
+                  </span>
                 </div>
               </div>
             </div>
           ))}
         </div>
+      </div>
+      <br/>
+      <br/>
+      <div className="total-price">
+        <h3>Total Price: ${totalPrice.toFixed(2)} USD</h3> {/* Display total price */}
       </div>
       <button className="see-full-menu-button">See Full Menu</button>
     </div>

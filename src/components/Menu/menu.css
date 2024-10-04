@@ -118,10 +118,20 @@ padding-bottom: 40px;
     align-items: center;
     margin-top: 15px;
   }
+  .total-price{
+    color: #29a9a0;
+  }
   
   .menu-price {
     font-size: 16px;
     font-weight: bold;
+  }
+  .menu-total-price {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 85px;
+    display: flex;
+    align-items: center;
   }
   
   .add-to-cart-button {

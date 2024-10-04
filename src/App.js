@@ -10,18 +10,18 @@ import Footer from './components/Footer/footer';
 import { useState } from 'react';
 
 function App() {
-  const [cartCounts, setCartCounts] = useState(0); // Cart state
+  const [cartCounts, setCartCounts] = useState(0); 
 
-  const handleAddToCart = (count) => {
-    setCartCounts(cartCounts + count); // Update cart count
+  const handleAddToCart = (count) => {            
+    setCartCounts(cartCounts + count);            
   };
 
   return (
     <div className="App">
-      <Navbar cartCounts={cartCounts} />  {/* Pass cart count to Navbar */}
+      <Navbar cartCounts={cartCounts} /> 
       <Home />
       <Hero />
-      <Menu onAddToCart={handleAddToCart} />  {/* Pass handleAddToCart to Menu */}
+      <Menu onAddToCart={handleAddToCart} /> 
       <Order />
       <Store />
       <Footer />
